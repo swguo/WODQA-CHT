@@ -3,16 +3,10 @@ WODQA-CHT : A Dataset and Baselines for Traditional Chinese Wikipedia Open Domai
 
 # Inverted Index for wiki Corpus
 python -m pyserini.index.lucene \\ <br>
-  --collection JsonCollection \\
-  
-  --input corpus \\
-  
-  --language zh \\
-  
-  --index Index/Wiki_Chinese \\
-  
-  --generator DefaultLuceneDocumentGenerator \\
-  
-  --threads 1 \\
-  
+  --collection JsonCollection \\  <br>
+  --input corpus \\  <br>
+  --language zh \\  <br>
+  --index Index/Wiki_Chinese \\  <br>
+  --generator DefaultLuceneDocumentGenerator \\  <br>
+  --threads 1 \\  <br>
   --storePositions --storeDocvectors --storeRaw
