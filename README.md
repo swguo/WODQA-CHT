@@ -18,16 +18,24 @@ python -m pyserini.index.lucene \\ <br>
  # Running
  
  ## Naive QG without filter
+ ```
  python main.py -t naive
+ ```
  
  ## Entity pass filter-1
+ ```
  python main.py -t f1
+ ```
  
  ## Question pass filter-1&2
+ ```
  python main.py -t f2
+ ```
   
  ## Full filter passed
+ ```
  python main.py -t all
+ ```
  
  # Framework
 ![image](https://user-images.githubusercontent.com/5722978/176619116-018ca6cc-835c-4c88-9435-a4fae1e42cfe.png)
