@@ -17,8 +17,8 @@ model = AutoModelForQuestionAnswering.from_pretrained("nyust-eb210/braslab-bert-
 def Retreiver(quesion):
     searcher.set_language('zh')
     hits = searcher.search(quesion, k=10)
-      # for hit in hits:
-        # print(hit.raw)
+    for hit in hits:
+      print(hit.raw)
     return hits
 
 def simpleReader(text, query):
@@ -65,7 +65,7 @@ def EntityRetriver(entity):
     hits = Retreiver(entity)
     QA_pair = []
     
-    #print(f'Total of aritcle: {len(hits)}\n')
+    print(f'Total of aritcle: {len(hits)}\n')
     for idx,i in enumerate(hits):
       #print(f'artical {idx}\n')
       

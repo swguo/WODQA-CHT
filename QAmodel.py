@@ -3,6 +3,7 @@ import pandas as pd
 from transformers import AutoTokenizer, AutoModelForQuestionAnswering
 import torch
 import json
+from tqdm import tqdm
 from pyserini.search.lucene import LuceneSearcher
 from pyserini.index import IndexReader
 import os
@@ -53,12 +54,14 @@ def simpleReader(text, query):
 
 
 def Prediction(data_df):
+    answer_set = []
     for index,data in tqdm(data_df.iterrows(),total=data_df.shape[0]):
         if data.answerable:
             print(f'index:{index}')
             q = data.q
             print(f'question:{q}')
             hits = searcher.search(q)
+            print()
             pre_answer = simulate_search(hits,q)
             print(f'true : {data.answer}, pred answer: {pre_answer}')
             answer_set.append([data.answer,pre_answer])
@@ -71,15 +74,15 @@ def Prediction(data_df):
 
 def run(filter,odqa_pred_str,odqa_ans_str):
 
-  answer_set = []
+  
 
   if not os.path.exists(f'qa_predict/{model_name}/{RETREIVAL_MOD}'):
     os.makedirs(f'qa_predict/{model_name}/{RETREIVAL_MOD}')
 
-  data_df = pd.read_csv(f'{odqa_pred_str}.csv')
+  data_df = pd.read_csv(f'{odqa_ans_str}.csv')
   if filter != 'f3':
     data_df['answerable'] = True
 
-  answer_df = Prediction(data_df.loc[:999])
+  answer_df = Prediction(data_df)
 
-  answer_df.to_csv(f'qa_predict/{model_name}/{RETREIVAL_MOD}/{odqa_ans_str}.csv',index=None)
+  answer_df.to_csv(f'qa_predict/{model_name}/{RETREIVAL_MOD}/{odqa_pred_str}.csv',index=None)

@@ -19,18 +19,18 @@ def run():
       if e_idx<0:
           writer.writerow(['id','q','a','article','iw','v','n','dup','len'])
       for ent in tqdm(ent_list[e_idx+1:]):
-
+          print(ent) 
           # 查詢文章
           QA_pair_df = ir.EntityRetriver(ent)
-
+          
           # 篩選品質好的 Question
           q_QA_pair = h.filter_q(QA_pair_df)
-
+          print(q_QA_pair) 
           # 如果沒資料，不紀錄這筆Q
           if not q_QA_pair: # List is empty
               continue
 
-          #print(q_QA_pair)    
+             
           q_QA_pair_df_f = pd.DataFrame(q_QA_pair)
 
           q_QA_pair_df_f['len'] = q_QA_pair_df_f['q'].str.len() 
