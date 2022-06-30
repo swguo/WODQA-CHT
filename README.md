@@ -29,8 +29,11 @@ python -m pyserini.index.lucene \\ <br>
  ## Full filter passed
  python main.py -t all
  
+ # Framework
  
- # Score
+ ![image](https://user-images.githubusercontent.com/5722978/176618847-5605f4cf-e7e6-4585-974d-2e9f975d2ea9.png)
+
+ # Baseline Sore
  
 | Dataset  | EM  | F1  |  Example | Avg.Len(q)  | Avg.Len(a)  |  
 |---|---|---|---|---|---|
