@@ -2,9 +2,11 @@
 WODQA-CHT : A Dataset and Baselines for Traditional Chinese Wikipedia Open Domain QA
 
 # setup
+```
 pip install -q -r requirement.txt
-
+```
 # Inverted Index for wiki Corpus
+```
 python -m pyserini.index.lucene \\ <br>
   --collection JsonCollection \\  <br>
   --input corpus \\  <br>
@@ -13,7 +15,7 @@ python -m pyserini.index.lucene \\ <br>
   --generator DefaultLuceneDocumentGenerator \\  <br>
   --threads 1 \\  <br>
   --storePositions --storeDocvectors --storeRaw
-  
+```  
   
  # Running
  
