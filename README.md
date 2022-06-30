@@ -30,5 +30,14 @@ python -m pyserini.index.lucene \\ <br>
  python main.py -t all
  
  
+ # Score
  
+| Dataset  | EM  | F1  |  Example | Avg.Len(q)  | Avg.Len(a)  |  
+|---|---|---|---|---|---|
+|  Naive            | 29.30%  | 26.90%  | 1k  | 21.58  | 4.67  |
+|  F1 filter        | 32.23%  | 30.77%  | 1k  | 21.17  | 5.69  |
+|  F1+F2 filter     | 35.40%  | 34.35%  | 1k  | 26.25  | 5.79  |
+|  F1+F2+F3 filter  | 64.71%  | 60.94%  | 425 | 26.76  | 5.96  |
+
+
  
