@@ -1,0 +1,4 @@
+pyserini==0.17.0
+faiss-cpu==1.7.2
+transformers>=4.5.0
+requests
