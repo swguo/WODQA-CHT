@@ -6,3 +6,4 @@ jieba
 tqdm
 pandas
 numpy
+lawrouge

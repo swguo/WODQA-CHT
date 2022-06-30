@@ -8,8 +8,8 @@ import jieba.analyse
 #載入包含維基百科 Entity 的分詞表
 
 #jieba.analyse.set_idf_path(f'v2/idf.txt-wiki.big.txt')
-jieba.set_dictionary(f'v2/dict.txt-wiki.big.txt')
-jieba.analyse.set_stop_words(f'../extra_data/stopwords_cn.txt')
+jieba.set_dictionary(f'data/dict.txt-wiki.big.txt')
+jieba.analyse.set_stop_words(f'data/stopwords_cn.txt')
 
 # 自動篩選合格 entity
 def entity_select(df,top_n=100):
@@ -171,7 +171,7 @@ def stopwordslist(filepath):
     stopwords = [line.strip() for line in open(filepath, 'r', encoding='utf-8').readlines()]  
     return stopwords
 
-stopwords = stopwordslist('../extra_data/stopwords_cn.txt')  # 這裏加載停用詞的路徑
+stopwords = stopwordslist('data/stopwords_cn.txt')  # 這裏加載停用詞的路徑
 
 # 移除句子內的停用字
 def movestopwords(sentence):
