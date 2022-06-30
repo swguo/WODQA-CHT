@@ -17,16 +17,16 @@ python -m pyserini.index.lucene \\ <br>
   
  # Running
  
- ## naive qg without filter
+ ## Naive qg without filter
  python main.py -t naive
  
  ## Entity pass filter-1
  python main.py -t f1
  
- ## Question pass filter-2
+ ## Question pass filter-1&2
  python main.py -t f2
   
- ## full filter passed
+ ## Full filter passed
  python main.py -t all
  
  
