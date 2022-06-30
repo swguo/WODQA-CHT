@@ -6,7 +6,7 @@ import jieba
 from jieba import posseg
 
 def run():    
-  df = pd.read_csv('index/wiki_entity.csv')
+  df = pd.read_csv('data/wiki_entity.csv')
   ent_list = h.entity_select(df,10000) 
 
   ent_list_df = pd.DataFrame(ent_list,columns=['ent'])

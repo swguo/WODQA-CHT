@@ -47,16 +47,17 @@ def em(QA_Pair):
     em = count/QA_Pair.shape[0]
     return em
 
-answer_df = pd.read_csv(f'qa_predict/nyust-eb210/braslab-bert-drcd-384/LuceneSearcher/pred_f3_cn.csv')
-quest_df = pd.read_csv(f'odqa_f3_cn.csv')
-answer_df['q'] = quest_df['q']
+def run(pred_f3_cn_str,odqa_f3_cn_str):
+  answer_df = pd.read_csv(f'qa_predict/nyust-eb210/braslab-bert-drcd-384/LuceneSearcher/{pred_f3_cn_str}.csv')
+  quest_df = pd.read_csv(f'{odqa_f3_cn_str}.csv')
+  answer_df['q'] = quest_df['q']
 
-t_answer,p_answer = key_mapping(answer_df)
-f1_score = f1(t_answer['idx'].to_list(),p_answer['idx'].to_list())
-em_score = em(answer_df)
+  t_answer,p_answer = key_mapping(answer_df)
+  f1_score = f1(t_answer['idx'].to_list(),p_answer['idx'].to_list())
+  em_score = em(answer_df)
 
-print(f1_score)
-print(em_score)
+  print(f1_score)
+  print(em_score)
 
-mean(answer_df)
+  mean(answer_df)
 

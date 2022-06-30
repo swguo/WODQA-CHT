@@ -8,7 +8,7 @@ q_QA_pair_df_f_all = pd.read_csv('ODQA-Dataset-qg-stream.csv')
 import numpy as np
 from scipy import spatial
 import jieba
-jieba.set_dictionary(f'v2/dict.txt-wiki.big.txt')
+jieba.set_dictionary(f'data/dict.txt-wiki.big.txt')
 # 計算相關係數  jaccard score
 def cal_cc(x,y):    
     j_score = h.jaccard(x, y)

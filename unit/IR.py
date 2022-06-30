@@ -9,8 +9,8 @@ import pandas as pd
 
 tokenizer = AutoTokenizer.from_pretrained("nyust-eb210/braslab-bert-drcd-384")
 model = AutoModelForQuestionAnswering.from_pretrained("nyust-eb210/braslab-bert-drcd-384")
-searcher = LuceneSearcher('../Index/Wiki_Chinese')
-index_reader = IndexReader('../Index/Wiki_Chinese')
+searcher = LuceneSearcher('Index/Wiki_Chinese')
+index_reader = IndexReader('Index/Wiki_Chinese')
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 model = AutoModelForQuestionAnswering.from_pretrained("nyust-eb210/braslab-bert-drcd-384").to(device)
 
