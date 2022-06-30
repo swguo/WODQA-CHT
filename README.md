@@ -30,8 +30,8 @@ python -m pyserini.index.lucene \\ <br>
  python main.py -t all
  
  # Framework
- 
- ![image](https://user-images.githubusercontent.com/5722978/176618847-5605f4cf-e7e6-4585-974d-2e9f975d2ea9.png)
+![image](https://user-images.githubusercontent.com/5722978/176619116-018ca6cc-835c-4c88-9435-a4fae1e42cfe.png)
+
 
  # Baseline Sore
  
