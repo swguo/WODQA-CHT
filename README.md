@@ -17,7 +17,7 @@ python -m pyserini.index.lucene \\ <br>
   
  # Running
  
- ## Naive qg without filter
+ ## Naive QG without filter
  python main.py -t naive
  
  ## Entity pass filter-1
