@@ -45,7 +45,7 @@ python -m pyserini.index.lucene \\ <br>
 
  # Baseline Sore
  
-| Dataset  | EM  | F1  | Avg.Len(q)  | Avg.Len(a)  |  
+| Dataset  | EM  | F1  | Avg.Len(q)  |  
 |---|---|---|---|---|
 |  Without filter   | 29.30 %  | 26.90 %  | 21.58  |
 |  F1 filter        | 32.23 %  | 30.77 %  | 21.17  |
