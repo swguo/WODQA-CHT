@@ -1,7 +1,7 @@
 # WODQA-CHT
 WODQA-CHT and its Generator for Traditional Chinese Open Domain Question Answering
 
-The dataset available at [here](https://github.com/swguo/WODQA-CHT/blob/main/data/wiki_entity.csv)
+The dataset available at [here](https://github.com/swguo/WODQA-CHT/blob/main/data/wodqa_cnt.csv)
 # setup
 ```
 pip install -q -r requirement.txt
