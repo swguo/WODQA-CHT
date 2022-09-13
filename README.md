@@ -2,6 +2,16 @@
 WODQA-CHT and its Generator for Traditional Chinese Open Domain Question Answering
 
 The dataset available at [here](https://github.com/swguo/WODQA-CHT/blob/main/data/wodqa_cnt.csv)
+
+| Columns  | Description  | 
+|---|---|
+|  question   | Question | 
+|  qitm        | Question keywords  | 
+|  article     | Wiki Article  | 
+|  aitm       | Article keywords  | 
+|  answer        | Answer  | 
+
+
 # setup
 ```
 pip install -q -r requirement.txt
