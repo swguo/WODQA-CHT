@@ -51,7 +51,8 @@ python -m pyserini.index.lucene \\ <br>
  ```
  
  # Framework
-![image](https://user-images.githubusercontent.com/5722978/181149462-6312c8a2-1242-487e-bfb4-ceacbe58a55b.png)
+
+![flow](https://user-images.githubusercontent.com/5722978/189902323-be43b401-edcd-4f73-80fe-d25f96522173.jpg){width=250}
 
 
  # Baseline Sore
